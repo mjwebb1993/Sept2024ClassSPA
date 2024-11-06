@@ -87,7 +87,7 @@ https: router.hooks({
 router
   .on({
     "/": () => render(store.home),
-    ":view": match => {
+    "/:view": match => {
       const view = match?.data?.view ? camelCase(match.data.view) : "home";
       if (view in store) {
         render(store[view]);
