@@ -33,7 +33,7 @@ router.hooks({
             `https://api.openweathermap.org/data/2.5/weather?appid=${process.env.OPEN_WEATHER_MAP_API_KEY}&q=st%20louis&units=imperial`
           )
           .then(response => {
-            console.log("Weather Response Data", response.data);
+            // console.log("Weather Response Data", response.data);
             store.home.weather = {
               city: response.data.name,
               temp: response.data.main.temp,
@@ -53,7 +53,7 @@ router.hooks({
           .get(`${process.env.PIZZA_PLACE_API_URL}/pizzas`)
           .then(response => {
             // We need to store the response to the state, in the next step but in the meantime let's see what it looks like so that we know what to store from the response.
-            console.log("response", response);
+            // console.log("response", response);
             store.pizza.pizzas = response.data;
 
             done();
@@ -84,7 +84,7 @@ router.hooks({
 
         // Get the form element
         const inputList = event.target.elements;
-        console.log("Input Element List", inputList);
+        // console.log("Input Element List", inputList);
 
         // Create an empty array to hold the toppings
         const toppings = [];
@@ -107,7 +107,7 @@ router.hooks({
           toppings: toppings
         };
         // Log the request body to the console
-        console.log("request Body", requestData);
+        // console.log("request Body", requestData);
 
         axios
           // Make a POST request to the API to create a new pizza

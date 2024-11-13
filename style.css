@@ -85,6 +85,14 @@ footer {
   text-align: center;
 }
 
+.bus-stop {
+  background-color: lightgray;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+
 @media (max-width: 549px){
   .hidden--mobile {
     display: none !important;
